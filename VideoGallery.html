@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Online Video Parlour</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			.redtext {
+				color: red;
+			}
+			/* Style the body */
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 0;
+			}
+
+			.topnav {
+				overflow: hidden;
+				background-color: #000000;
+			}
+
+			.topnav a {
+				float: left;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+			}
+
+			.topnav a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+
+			.topnav a.active {
+				background-color: #2196f3;
+				color: white;
+			}
+
+			.topnav .login-container {
+				float: right;
+			}
+
+			.topnav input[type="text"] {
+				padding: 6px;
+				margin-top: 8px;
+				font-size: 17px;
+				border: none;
+				width: 120px;
+			}
+
+			.topnav .login-container button {
+				float: right;
+				padding: 6px 10px;
+				margin-top: 8px;
+				margin-right: 16px;
+				background-color: #555;
+				color: white;
+				font-size: 17px;
+				border: none;
+				cursor: pointer;
+			}
+
+			.topnav .login-container button:hover {
+				background-color: green;
+			}
+
+			/* Header/logo Title */
+			.header {
+				padding: 20px;
+				text-align: center;
+				background: #1abc9c;
+				color: white;
+			}
+
+			/* Increase the font size of the heading */
+			.header h1 {
+				font-size: 40px;
+			}
+
+			/* Style the top navigation bar */
+			.navbar {
+				overflow: hidden;
+				background-color: #333;
+			}
+
+			/* Style the navigation bar links */
+			.navbar a {
+				float: left;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 20px;
+				text-decoration: none;
+			}
+
+			/* Right-aligned link */
+			.navbar a.right {
+				float: right;
+			}
+
+			/* Change color on hover */
+			.navbar a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+
+			/* Column container */
+			.row {
+				display: -ms-flexbox; /* IE10 */
+				display: flex;
+				-ms-flex-wrap: wrap; /* IE10 */
+				flex-wrap: wrap;
+			}
+
+			/* Create two unequal columns that sits next to each other */
+			/* Sidebar/left column */
+			.side {
+				-ms-flex: 30%; /* IE10 */
+				flex: 30%;
+				background-color: #f1f1f1;
+				padding: 20px;
+			}
+
+			/* Main column */
+			.main {
+				-ms-flex: 70%; /* IE10 */
+				flex: 70%;
+				background-color: white;
+				padding: 20px;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			/* 
+  This is the starting grid for each video with thumbnails 4 across for the largest screen size.
+  It's important to use percentages or there may be gaps on the right side of the page. 
+  */
+
+			.video {
+				background: #fff;
+				padding-bottom: 20px;
+				box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+				width: 23%; /* Thumbnails 4 across */
+				margin: 1%;
+				float: left;
+			}
+
+			/* 
+   These keep the height of each video thumbnail consistent between YouTube and Vimeo.
+   Each can have thumbnail sizes that vary by 1px and are likely break your layout. 
+   */
+
+			.video figure {
+				height: 0;
+				padding-bottom: 56.25%;
+				overflow: hidden;
+
+				.video figure a {
+					display: block;
+					margin: 0;
+					padding: 0;
+					border: none;
+					line-height: 0;
+				}
+			}
+
+			/* Media Queries - This is the responsive grid. */
+
+			@media (max-width: 1024px) {
+				.video {
+					width: 31.333%; /* Thumbnails 3 across */
+				}
+			}
+
+			@media (max-width: 600px) {
+				.video {
+					width: 48%; /* Thumbnails 2 across */
+				}
+			}
+
+			@media (max-width: 360px) {
+				.video {
+					display: block;
+					width: 96%; /* Single column view. */
+					margin: 2%; /* The smaller the screen, the smaller the percentage actually is. */
+					float: none;
+				}
+			}
+
+			/* These are my preferred rollover styles. */
+
+			.video img {
+				width: 100%;
+				opacity: 1;
+			}
+
+			.video img:hover,
+			.video img:active,
+			.video img:focus {
+				opacity: 0.75;
+			}
+			/* Fake image, just for this example */
+			.fakeimg {
+				background-color: #aaa;
+				width: 100%;
+				padding: 0px;
+			}
+
+			/* Footer */
+			.footer {
+				padding: 8px;
+				text-align: center;
+				background: #ddd;
+			}
+
+			/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+			@media screen and (max-width: 700px) {
+				.row {
+					flex-direction: column;
+				}
+			}
+
+			/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+			@media screen and (max-width: 400px) {
+				.navbar a {
+					float: none;
+					width: 100%;
+				}
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			.cart-popup {
+				position: absolute;
+				width: 60%;
+				height: 80%;
+				margin: 0 auto;
+				background: #fff;
+				border: 6px solid orange;
+				border-radius: 25px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.cart-heading {
+				text-align: center;
+			}
+
+			.close-btn {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+			}
+
+			#users-carts {
+				padding: 1em;
+			}
+
+			#users-carts .cart-btn {
+				display: none;
+			}
+
+      #total{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Online Video Parlour</h1>
+			<p>A place where you can buy or rent any kind of video clips</p>
+		</div>
+
+		<div class="topnav">
+			<a class="active" href="#home">Home</a>
+			<a href="#about">About</a>
+			<a href="#contact">Contact</a>
+			<div class="login-container">
+				<button type="submit" id="myCartBtn" onclick="showCartPopUp()">
+					🛒 My Cart
+				</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="side">
+				<h2>Website Owners</h2>
+
+				<img
+					src="https://media-exp1.licdn.com/dms/image/C4E03AQFyeGr1IevUbg/profile-displayphoto-shrink_400_400/0/1601012853231?e=1619654400&v=beta&t=IwvzP_lnve1KUM7jDqpgCNx4CI2LaxXbmifCTXaN1UQ"
+					style="width: 200px; height: 200px"
+				/>
+				<h5>Nikhil Prakash</h5>
+				<img
+					src="https://media-exp1.licdn.com/dms/image/C5603AQFTzGA-psj7Og/profile-displayphoto-shrink_400_400/0/1611310817622?e=1619654400&v=beta&t=Ckl8wqjkVT84A6aIH0qoglT1lcxC3InShN976iMYqK0"
+					style="width: 200px; height: 200px"
+				/>
+				<h5>Neeraj Kumar</h5>
+				<img
+					src="https://media-exp1.licdn.com/dms/image/C4D03AQHiJkZjjBsE6g/profile-displayphoto-shrink_400_400/0/1614150737413?e=1619654400&v=beta&t=MkyZNqQTK3sxwuxM0DGyWbOWE87yuewaJYHPZT6rXX8"
+					style="width: 200px; height: 200px"
+				/>
+				<h5>Kumar Pushpam</h5>
+			</div>
+
+			<div class="main text-center">
+				<h2 class="text-center">Loading...</h2>
+			</div>
+		</div>
+
+		<div class="cart-popup hidden">
+			<h2 class="cart-heading">Your Cart 🛒</h2>
+			<hr />
+			<button class="close-btn" onclick="hideCartPopUp()">Close ❌</button>
+
+			<div id="users-carts">
+				<h3>Loading...</h3>
+			</div>
+			<div id="total">
+				<strong>Your total:</strong>
+				<span id="total-amount">0</span>
+
+        <button onclick="checkuot()">Checkout</button>
+			</div>
+		</div>
+
+		<div class="footer">
+			<h3>Copyright Reserved to Nikhil, Neeraj, Pushpam</h3>
+		</div>
+
+		<script src="./VideoGallery.js"></script>
+	</body>
+</html>
