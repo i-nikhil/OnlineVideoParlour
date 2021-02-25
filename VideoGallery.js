@@ -57,7 +57,7 @@ const cartData = [
     >
       <img
         class="videoThumb"
-        src="https://i.ytimg.com/an_webp/7lvXbfNBIQg/mqdefault_6s.webp?du=3000&sqp=CIjz3YEG&rs=AOn4CLAaXnxs2i1RqEb59jpv6326_VFnZg"
+        src="https://i.pinimg.com/originals/b7/97/30/b797305e2dbcc14fc6851b4f8db0b0f3.gif"
     /></a>
   </figure>
   <h2 class="videoTitle">Travel-1 ₹540</h2>
@@ -74,7 +74,7 @@ const cartData = [
     >
       <img
         class="videoThumb"
-        src="https://i.ytimg.com/an_webp/UnKJL_ifwkk/mqdefault_6s.webp?du=3000&sqp=CMju3YEG&rs=AOn4CLBOUTVZQcA0H6CisCIpCo3hbj-icw"
+        src="http://static1.squarespace.com/static/56392560e4b0cb1b2c7fce7f/564ff791e4b02fdfadad30da/598d1dc3893fc0cccf605e4d/1507221546378/giphy-8.gif?format=1500w"
     /></a>
   </figure>
   <h2 class="videoTitle">Travel-2 ₹680</h2>
@@ -91,7 +91,7 @@ const cartData = [
     >
       <img
         class="videoThumb"
-        src="https://i.ytimg.com/an_webp/SMKPKGW083c/mqdefault_6s.webp?du=3000&sqp=CL7O3YEG&rs=AOn4CLAwHUaahjjiXsI5OFNUrzT0Bp96Xg"
+        src="https://www.edreams.com/blog/wp-content/uploads/sites/3/2016/03/mountains-travel.gif"
     /></a>
   </figure>
   <h2 class="videoTitle">Travel-3 ₹450</h2>
