@@ -23,7 +23,7 @@ const cartData = [
     >
       <img
         class="videoThumb"
-        src="https://i.ytimg.com/an_webp/CskchdyN9Qw/mqdefault_6s.webp?du=3000&sqp=CKzq3YEG&rs=AOn4CLD_RGuepjHWFvtBWlk6Vf-CoC3fug"
+        src="https://bcblive.com/wp-content/uploads/lbl-intro-gif.gif"
     /></a>
   </figure>
   <h2 class="videoTitle">Intro-2 ₹240</h2>
@@ -40,7 +40,7 @@ const cartData = [
     >
       <img
         class="videoThumb"
-        src="https://i.ytimg.com/an_webp/e7eMKW6DZHc/mqdefault_6s.webp?du=3000&sqp=CLDK3YEG&rs=AOn4CLAop6iN08vqOXgBAMi9Q_ntuxnd_w"
+        src="https://thumbs.gfycat.com/ElatedClumsyAxisdeer-max-1mb.gif"
     /></a>
   </figure>
   <h2 class="videoTitle">Intro-3 ₹300</h2>
