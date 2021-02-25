@@ -5,6 +5,7 @@ const cartData = [
       class="fancybox fancybox.iframe"
       href="https://youtu.be/t3tsMEhlvwM"
     >
+<iframe width="974" height="548" src="https://www.youtube.com/embed/t3tsMEhlvwM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <img
         class="videoThumb"
         src="https://i.gifer.com/CqND.gif"
