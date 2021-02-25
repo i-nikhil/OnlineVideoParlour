@@ -7,7 +7,7 @@ const cartData = [
     >
       <img
         class="videoThumb"
-        src="https://i.ytimg.com/an_webp/t3tsMEhlvwM/mqdefault_6s.webp?du=3000&sqp=CNru3YEG&rs=AOn4CLAE2rbOYVGTSyg5meGFBhGQGP4HDw"
+        src="https://i.gifer.com/CqND.gif"
     /></a>
   </figure>
   <h2 class="videoTitle">Intro-1 ₹190</h2>
