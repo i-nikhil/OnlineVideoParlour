@@ -108,7 +108,7 @@ const cartData = [
     >
       <img
         class="videoThumb"
-        src="https://i.ytimg.com/an_webp/N5HQLRBOMBg/mqdefault_6s.webp?du=3000&sqp=CNjk3YEG&rs=AOn4CLDiBf35UsqNe4dg0un4QaHCTt8ziA"
+        src="https://media1.giphy.com/media/l4FAPaGGeB7D1LfIA/200.gif"
     /></a>
   </figure>
   <h2 class="videoTitle">Closer-1 ₹85</h2>
@@ -125,7 +125,7 @@ const cartData = [
     >
       <img
         class="videoThumb"
-        src="https://i.ytimg.com/an_webp/CrL-lNtN140/mqdefault_6s.webp?du=3000&sqp=CP2I3oEG&rs=AOn4CLBwhyTiFguFsBKbdFWHikj5aK3ztQ"
+        src="https://thumbs.gfycat.com/AdoredTinyFirecrest-size_restricted.gif"
     /></a>
   </figure>
   <h2 class="videoTitle">Closer-2 ₹120</h2>
@@ -142,7 +142,7 @@ const cartData = [
     >
       <img
         class="videoThumb"
-        src="https://i.ytimg.com/an_webp/DrSm4tzGvcM/mqdefault_6s.webp?du=3000&sqp=CP3t3YEG&rs=AOn4CLBRyVJVuVHG84plc2OxBkqFiAjHCw"
+        src="https://i.pinimg.com/originals/94/2d/cd/942dcd09a6e92d09f7502a5d744b8473.gif"
     /></a>
   </figure>
   <h2 class="videoTitle">Closer-3 ₹135</h2>
